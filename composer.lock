@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c61ff82cbf0142a401a48a8161e1595a",
+    "content-hash": "cddd84c407963de881219f2af00a3fb9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -196,6 +196,53 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.1"
             },
             "time": "2021-08-13T13:06:58+00:00"
+        },
+        {
+            "name": "dnsimmons/openweather",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dnsimmons/openweather.git",
+                "reference": "83c6e530d21cd154231ee3eb8c719fdc30c69031"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dnsimmons/openweather/zipball/83c6e530d21cd154231ee3eb8c719fdc30c69031",
+                "reference": "83c6e530d21cd154231ee3eb8c719fdc30c69031",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Dnsimmons\\OpenWeather\\OpenWeatherServiceProvider"
+                    ],
+                    "aliases": {
+                        "OpenWeather": "Dnsimmons\\OpenWeather\\OpenWeather"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dnsimmons\\OpenWeather\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Dave Simmons",
+                    "email": "hello@dsimmons.me"
+                }
+            ],
+            "description": "OpenWeather is a Laravel package simplifying working with the free Open Weather Map APIs.",
+            "support": {
+                "issues": "https://github.com/dnsimmons/openweather/issues",
+                "source": "https://github.com/dnsimmons/openweather/tree/1.0.7"
+            },
+            "time": "2021-12-27T01:45:14+00:00"
         },
         {
             "name": "doctrine/inflector",

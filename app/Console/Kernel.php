@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Jobs\GetWeatherForecast;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -15,7 +16,11 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->job(new GetWeatherForecast('New York'))->everySixHours();
+        $schedule->job(new GetWeatherForecast('London'))->everySixHours();
+        $schedule->job(new GetWeatherForecast('Paris'))->everySixHours();
+        $schedule->job(new GetWeatherForecast('Berlin'))->everySixHours();
+        $schedule->job(new GetWeatherForecast('Tokyo'))->everySixHours();
     }
 
     /**
